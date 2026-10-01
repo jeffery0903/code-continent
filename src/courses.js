@@ -29,7 +29,7 @@ window.COURSES = [
     exercises: [
       { tier: "热身", task: "用 print 输出：你好", initialCode: "# 写代码\n", expected: "你好", answer: "print(\"你好\")", hint: "把要显示的文字用引号包住，放进 print 后面的括号里，注意要用英文引号。" },
       { tier: "巩固", task: "用三个 print 分别输出：你好、代码、大陆，每行一个", initialCode: "# 写代码\n", expected: "你好\n代码\n大陆", answer: "print(\"你好\")\nprint(\"代码\")\nprint(\"大陆\")", hint: "三个 print 就是三次输出，每次只放一段文字，三行的先后顺序别搞反。" },
-      { tier: "挑战", task: "只用一条 print，一次输出三行：皮皮、欢迎你、来到代码大陆（换行要自己想办法）", initialCode: "# 写代码\n", expected: "皮皮\n欢迎你\n来到代码大陆", answer: "print(\"皮皮\\n欢迎你\\n来到代码大陆\")  ——  \\n 是换行符，写两个字符就行", hint: "三段文字塞进同一个 print，中间用 \\n 断开，它就会自动换行输出。" }
+      { tier: "挑战", task: "只用一条 print，一次输出三行：皮皮、欢迎你、来到代码大陆（换行要自己想办法）", initialCode: "# 写代码\n", expected: "皮皮\n欢迎你\n来到代码大陆", answer: "print(\"皮皮\\n欢迎你\\n来到代码大陆\")", hint: "三段文字塞进同一个 print，中间用 \\n 断开，它就会自动换行输出。" }
     ]
   },
   {
@@ -56,9 +56,9 @@ window.COURSES = [
       "答案：print(30 + 18)"
     ],
     exercises: [
-      { tier: "热身", task: "输出 7 × 8 的结果", initialCode: "# 写代码\n", expected: "56", answer: "乘法用 *：print(7 * 8)", hint: "乘号在键盘上是星号 *，别写成字母 x，把两个数字用 * 连起来再输出。" },
-      { tier: "巩固", task: "苹果 6 元一个，买 4 个一共多少钱？用算式输出结果", initialCode: "# 写代码\n", expected: "24", answer: "买 4 个就是 6 乘 4：print(6 * 4)", hint: "求总价用乘法：单价和数量之间用 * 连接，一条算式就能出结果。" },
-      { tier: "挑战", task: "一个文具盒 15 元，买 3 个，付给老板 100 元，应该找回多少钱？用一条算式输出", initialCode: "# 写代码\n", expected: "55", answer: "print(100 - 15 * 3)  —— 先算乘除，再算加减", hint: "思路是先用乘法算出 3 个文具盒的钱，再从 100 里减掉，乘除优先于加减，不用加括号。" }
+      { tier: "热身", task: "输出 7 × 8 的结果", initialCode: "# 写代码\n", expected: "56", answer: "print(7 * 8)", hint: "乘号在键盘上是星号 *，别写成字母 x，把两个数字用 * 连起来再输出。" },
+      { tier: "巩固", task: "苹果 6 元一个，买 4 个一共多少钱？用算式输出结果", initialCode: "# 写代码\n", expected: "24", answer: "print(6 * 4)", hint: "求总价用乘法：单价和数量之间用 * 连接，一条算式就能出结果。" },
+      { tier: "挑战", task: "一个文具盒 15 元，买 3 个，付给老板 100 元，应该找回多少钱？用一条算式输出", initialCode: "# 写代码\n", expected: "55", answer: "print(100 - 15 * 3)", hint: "思路是先用乘法算出 3 个文具盒的钱，再从 100 里减掉，乘除优先于加减，不用加括号。" }
     ]
   },
   {
@@ -140,7 +140,7 @@ window.COURSES = [
       "答案：print(\"早\" + \"上好\")"
     ],
     exercises: [
-      { tier: "热身", task: "输出\"加油\"重复 3 遍", initialCode: "# 写代码\n", expected: "加油加油加油", answer: "重复用 *：print(\"加油\" * 3)", hint: "让整段文字重复用 *：文字放前面，重复几遍的数字放后面。" },
+      { tier: "热身", task: "输出\"加油\"重复 3 遍", initialCode: "# 写代码\n", expected: "加油加油加油", answer: "print(\"加油\" * 3)", hint: "让整段文字重复用 *：文字放前面，重复几遍的数字放后面。" },
       { tier: "巩固", task: "把\"加油\"重复 3 遍，再拼上\"！\"输出（先用重复再用拼接）", initialCode: "# 写代码\n", expected: "加油加油加油！", answer: "print(\"加油\" * 3 + \"！\")", hint: "重复和拼接是两个动作：先用 * 把文字复制几份，再用 + 接上后面的内容。" },
       { tier: "挑战", task: "做一个标题框：第一行是 10 个等号，第二行是「代码大陆」，第三行又是 10 个等号（等号不要一个个敲）", initialCode: "# 写代码\n", expected: "==========\n代码大陆\n==========", answer: "print(\"=\" * 10)\nprint(\"代码大陆\")\nprint(\"=\" * 10)", hint: "等号不用手敲十遍，用 * 让一个等号重复 10 次，上下两行各来一次。", requireCode: "\\*\\s*10", requireMsg: "分割线要用 * 重复生成，不要手动敲一串等号。" }
     ]
@@ -253,8 +253,8 @@ window.COURSES = [
     expected: "你好，代码大陆",
     hints: ["思路：第一行写注释，第二行用 print", "细节：注释以 # 开头", "答案：\\n# 这是打招呼\\nprint(\"你好，代码大陆\")"],
     exercises: [
-      { tier: "热身", task: "写一行注释，并打印\"开始\"", initialCode: "# 写代码\n", expected: "开始", answer: "# 注释\\nprint(\"开始\")", hint: "井号后面那一行字电脑直接跳过，注释不会出现在输出里，该打印的照旧打印。" },
-      { tier: "巩固", task: "用注释标出两步（1存名字 2打印），再打印名字", initialCode: "# 写代码\n", expected: "小明", answer: "# 1 存名字\\nname = \"小明\"\\n# 2 打印\\nprint(name)", hint: "两处注释分别写在对应代码的上一行，井号后面的说明只是给人看的。" },
+      { tier: "热身", task: "写一行注释，并打印\"开始\"", initialCode: "# 写代码\n", expected: "开始", answer: "# 注释\nprint(\"开始\")", hint: "井号后面那一行字电脑直接跳过，注释不会出现在输出里，该打印的照旧打印。" },
+      { tier: "巩固", task: "用注释标出两步（1存名字 2打印），再打印名字", initialCode: "# 写代码\n", expected: "小明", answer: "# 1 存名字\nname = \"小明\"\n# 2 打印\nprint(name)", hint: "两处注释分别写在对应代码的上一行，井号后面的说明只是给人看的。" },
       { tier: "挑战", task: "先写一行注释说明这段代码干什么，再用变量存「皮皮」，最后输出：你好，我是皮皮", initialCode: "# 写代码\n", expected: "你好，我是皮皮", answer: "# 打招呼\nname = \"皮皮\"\nprint(\"你好，我是\" + name)", hint: "先用一行注释说明这段代码的作用，名字存进变量，再用 + 把问候语和变量名接起来。", requireCode: "name\\s*=", requireMsg: "要用变量存名字，再用 + 拼接输出。" }
     ]
   },
@@ -304,7 +304,7 @@ window.COURSES = [
     expected: "我是小明，今年18岁",
     hints: ["思路：先存名字和年龄，再拼接打印", "细节：数字 age 拼接前要 str()", "答案：\\nname = \"小明\"\\nage = 18\\nprint(\"我是\" + name + \"，今年\" + str(age) + \"岁\")"],
     exercises: [
-      { tier: "热身", task: "用变量存\"小红\"并打印", initialCode: "# 写代码\n", expected: "小红", answer: "name = \"小红\"\\nprint(name)", hint: "一个变量存名字，再把变量名输出，两步就够了。" },
+      { tier: "热身", task: "用变量存\"小红\"并打印", initialCode: "# 写代码\n", expected: "小红", answer: "name = \"小红\"\nprint(name)", hint: "一个变量存名字，再把变量名输出，两步就够了。" },
       { tier: "巩固", task: "用变量存城市和年龄，打印\"我在XX，今年XX岁\"", initialCode: "# 写代码\n", expected: "我在北京，今年20岁", answer: "city=\"北京\"; age=20; print(\"我在\"+city+\"，今年\"+str(age)+\"岁\")", hint: "城市可以直接拼进句子里，年龄是数字，得先用 str() 变成文字才能接上前后的文字。" },
       { tier: "挑战", task: "用变量存名字、年龄、身高（小数），输出一行自我介绍：我是小明，今年18岁，身高1.75米", initialCode: "# 写代码\n", expected: "我是小明，今年18岁，身高1.75米", answer: "name = \"小明\"\nage = 18\nheight = 1.75\nprint(\"我是\" + name + \"，今年\" + str(age) + \"岁，身高\" + str(height) + \"米\")", hint: "三个变量各存一项，拼接时两个数字都要先用 str() 转成文字，前后顺序照着句子来。", requireCode: "str\\s*\\(", requireMsg: "数字要先 str() 转成文字，才能和文字拼接。" }
     ]
@@ -413,9 +413,9 @@ window.COURSES = [
     expected: "可以进",
     hints: ["思路：先存 age，再用 if 判断", "细节：if 后要缩进", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "n = 5，判断是否大于 0，输出\"正\"或\"非正\"", initialCode: "n = 5\n# 写代码\n", expected: "正", answer: "if n > 0: print(\"正\") else: print(\"非正\")", hint: "变量已经给好了，用 if 判断它是否大于 0，两个分支各写一段，别忘了行尾冒号和缩进。", requireCode: "if\\s+[^:\\n]*[<>!]=?", requireMsg: "用 if/else 判断 n 是否大于 0。" },
-      { tier: "巩固", task: "x = 21，判断能否被 3 整除，输出\"整​除\"或\"不整除\"", initialCode: "x = 21\n# 写代码\n", expected: "整除", answer: "if x % 3 == 0: print(\"整除\") else: print(\"不整除\")", hint: "能不能整除看余数是不是 0，所以先算 % 再拿结果和 0 比较，if 配 else 走两条路。", requireCode: "if\\s+[^:\\n]*[<>!]=?", requireMsg: "用 if x%3==0 判断整除。" },
-      { tier: "挑战", task: "n = 15，若是 3 和 5 的公倍数输出\"两者都是\"、是 3 或 5 的倍数输出\"其中一个\"、否则输出\"都不是\"", initialCode: "n = 15\n# 写代码\n", expected: "两者都是", answer: "if n % 3 == 0 and n % 5 == 0:\n    print(\"两者都是\")\nelif n % 3 == 0 or n % 5 == 0:\n    print(\"其中一个\")\nelse:\n    print(\"都不是\")", hint: "先用 and 判断能否同时被 3 和 5 整除，中间情况用 elif 加 or，最后 else 兜底。", requireCode: "if\\s+[^:\\n]*[<>!]=?|and|or", requireMsg: "用 if/elif/else 结合 % 判断 3 和 5 的倍数。" }
+      { tier: "热身", task: "n = 5，判断是否大于 0，输出\"正\"或\"非正\"", initialCode: "n = 5\n# 写代码\n", expected: "正", answer: "if n > 0:\n    print(\"正\")\nelse:\n    print(\"非正\")", hint: "变量已经给好了，用 if 判断它是否大于 0，两个分支各写一段，别忘了行尾冒号和缩进。", requireCode: "if\\s+[^:\\n]*[<>=!]", requireMsg: "用 if/else 判断 n 是否大于 0。" },
+      { tier: "巩固", task: "x = 21，判断能否被 3 整除，输出\"整​除\"或\"不整除\"", initialCode: "x = 21\n# 写代码\n", expected: "整除", answer: "if x % 3 == 0:\n    print(\"整除\")\nelse:\n    print(\"不整除\")", hint: "能不能整除看余数是不是 0，所以先算 % 再拿结果和 0 比较，if 配 else 走两条路。", requireCode: "if\\s+[^:\\n]*[<>=!]", requireMsg: "用 if x%3==0 判断整除。" },
+      { tier: "挑战", task: "n = 15，若是 3 和 5 的公倍数输出\"两者都是\"、是 3 或 5 的倍数输出\"其中一个\"、否则输出\"都不是\"", initialCode: "n = 15\n# 写代码\n", expected: "两者都是", answer: "if n % 3 == 0 and n % 5 == 0:\n    print(\"两者都是\")\nelif n % 3 == 0 or n % 5 == 0:\n    print(\"其中一个\")\nelse:\n    print(\"都不是\")", hint: "先用 and 判断能否同时被 3 和 5 整除，中间情况用 elif 加 or，最后 else 兜底。", requireCode: "if\\s+[^:\\n]*[<>=!]|and|or", requireMsg: "用 if/elif/else 结合 % 判断 3 和 5 的倍数。" }
     ]
   },
   {
@@ -462,16 +462,16 @@ window.COURSES = [
       { title: "成绩分级", code: "score = 85\nif score >= 90:\n    print(\"优秀\")\nelif score >= 75:\n    print(\"良好\")\nelif score >= 60:\n    print(\"及格\")\nelse:\n    print(\"不及格\")", output: "良好" }
     ],
     task: "学堂按成绩分等级：≥90 优秀、≥75 良好、≥60 及格、其余不及格。已知 score = 85，用 if/elif/else 判断它属于哪一级，只输出那一级。",
-    requireCode: "if\\s+[^:\\n]*[<>!]=?",
+    requireCode: "if\\s+[^:\\n]*[<>=!]",
     requireMsg: "要用 if/elif/else 分级。变量名和比较写法随意，只要逻辑对、能输出\"良好\"即可。",
     initialCode: "score = 85\n# 在这里写代码\n",
     answer: "score = 85\nif score >= 90:\n    print(\"优秀\")\nelif score >= 75:\n    print(\"良好\")\nelif score >= 60:\n    print(\"及格\")\nelse:\n    print(\"不及格\")",
     expected: "良好",
     hints: ["思路：从上往下排，先判高分", "细节：elif 是 else if 的简写", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "age=20，≥18 输出\"成年\"否则\"未成年\"", initialCode: "age = 20\n# 写代码\n", expected: "成年", answer: "if age >= 18: print(\"成年\") else: print(\"未成年\")", hint: "变量已经给好了，只需用 if 判断它是否达到 18，行尾冒号加缩进，else 处理另一路。", requireCode: "if\\s+[^:\\n]*[<>!]=?", requireMsg: "判断是否成年，用 if/else 判断年龄是否达到 18 即可（变量名可自选）。" },
-      { tier: "巩固", task: "month=4，判断所属季节：3~5 春、6~8 夏、9~11 秋、12/1/2 冬，输出\"春\"", initialCode: "month = 4\n# 写代码\n", expected: "春", answer: "if 3 <= month <= 5: print(\"春\") elif 6 <= month <= 8: print(\"夏\") elif 9 <= month <= 11: print(\"秋\") else: print(\"冬\")", hint: "月份是一个连续区间，用链式比较写最清楚：从 3~5 那段开始逐段 elif，最后 else 留给冬天。", requireCode: "if\\s+[^:\\n]*[<>!]=?", requireMsg: "按月份判断季节：3~5春、6~8夏、9~11秋、其余冬。" },
-      { tier: "挑战", task: "a=3,b=4,c=5，判断能否构成三角形并输出\"能构成\"（两边之和大于第三边）", initialCode: "a = 3\nb = 4\nc = 5\n# 写代码\n", expected: "能构成", answer: "if a + b > c and a + c > b and b + c > a: print(\"能构成\") else: print(\"不能构成\")", hint: "三组两边之和都要大于第三边，三个条件缺一不可，用 and 串起来放进同一个 if。", requireCode: "if\\s+[^:\\n]*[<>!]=?", requireMsg: "判断三角形：a+b>c 且 a+c>b 且 b+c>a 才成立。" }
+      { tier: "热身", task: "age=20，≥18 输出\"成年\"否则\"未成年\"", initialCode: "age = 20\n# 写代码\n", expected: "成年", answer: "if age >= 18:\n    print(\"成年\")\nelse:\n    print(\"未成年\")", hint: "变量已经给好了，只需用 if 判断它是否达到 18，行尾冒号加缩进，else 处理另一路。", requireCode: "if\\s+[^:\\n]*[<>=!]", requireMsg: "判断是否成年，用 if/else 判断年龄是否达到 18 即可（变量名可自选）。" },
+      { tier: "巩固", task: "month=4，判断所属季节：3~5 春、6~8 夏、9~11 秋、12/1/2 冬，输出\"春\"", initialCode: "month = 4\n# 写代码\n", expected: "春", answer: "if 3 <= month <= 5:\n    print(\"春\")\nelif 6 <= month <= 8:\n    print(\"夏\")\nelif 9 <= month <= 11:\n    print(\"秋\")\nelse:\n    print(\"冬\")", hint: "月份是一个连续区间，用链式比较写最清楚：从 3~5 那段开始逐段 elif，最后 else 留给冬天。", requireCode: "if\\s+[^:\\n]*[<>=!]", requireMsg: "按月份判断季节：3~5春、6~8夏、9~11秋、其余冬。" },
+      { tier: "挑战", task: "a=3,b=4,c=5，判断能否构成三角形并输出\"能构成\"（两边之和大于第三边）", initialCode: "a = 3\nb = 4\nc = 5\n# 写代码\n", expected: "能构成", answer: "if a + b > c and a + c > b and b + c > a:\n    print(\"能构成\")\nelse:\n    print(\"不能构成\")", hint: "三组两边之和都要大于第三边，三个条件缺一不可，用 and 串起来放进同一个 if。", requireCode: "if\\s+[^:\\n]*[<>=!]", requireMsg: "判断三角形：a+b>c 且 a+c>b 且 b+c>a 才成立。" }
     ]
   },
   {
@@ -519,9 +519,9 @@ window.COURSES = [
     expected: "1\n2\n3",
     hints: ["思路：从 1 开始，每次 +1", "细节：循环里要更新 n", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "用 while 打印 1 到 5", initialCode: "# 写代码\n", expected: "1\n2\n3\n4\n5", answer: "n=1; while n<=5: print(n); n=n+1", hint: "先把计数器设成 1，while 的条件写成不超过 5，循环体里输出后必须让计数器加 1，忘了就死循环。", requireCode: "while\\s+.*\\s*[<>!]=?", requireMsg: "用 while 加循环条件，循环里更新 n。" },
-      { tier: "巩固", task: "用 while 从 10 倒数到 1（隔一个，即 10,8,6,4,2）", initialCode: "n = 10\n# 写代码\n", expected: "10\n8\n6\n4\n2", answer: "while n >= 2:\n    print(n)\n    n = n - 2", hint: "计数器从 10 起步，循环条件写成大于等于 2；每轮输出后让计数器减 2，注意最后一次的值。", requireCode: "while\\s+.*\\s*[<>!]=?", requireMsg: "用 while 遍历，每次 n 减 2 直到不满足条件。" },
-      { tier: "挑战", task: "用 while 求 1 到 100 中所有偶数的和，输出结果", initialCode: "s = 0\nn = 2\n# 写代码\n", expected: "2550", answer: "while n <= 100:\n    s = s + n\n    n = n + 2\nprint(s)", hint: "累加变量先初始化为 0，计数从 2 开始每次加 2 保证都是偶数，循环结束后输出这个和。", requireCode: "while\\s+.*\\s*[<>!]=?", requireMsg: "用 while 累加偶数（n 每次 +2）再 print(s)。" }
+      { tier: "热身", task: "用 while 打印 1 到 5", initialCode: "# 写代码\n", expected: "1\n2\n3\n4\n5", answer: "n = 1\nwhile n <= 5:\n    print(n)\n    n = n + 1", hint: "先把计数器设成 1，while 的条件写成不超过 5，循环体里输出后必须让计数器加 1，忘了就死循环。", requireCode: "while\\s+.*\\s*[<>=!]", requireMsg: "用 while 加循环条件，循环里更新 n。" },
+      { tier: "巩固", task: "用 while 从 10 倒数到 1（隔一个，即 10,8,6,4,2）", initialCode: "n = 10\n# 写代码\n", expected: "10\n8\n6\n4\n2", answer: "while n >= 2:\n    print(n)\n    n = n - 2", hint: "计数器从 10 起步，循环条件写成大于等于 2；每轮输出后让计数器减 2，注意最后一次的值。", requireCode: "while\\s+.*\\s*[<>=!]", requireMsg: "用 while 遍历，每次 n 减 2 直到不满足条件。" },
+      { tier: "挑战", task: "用 while 求 1 到 100 中所有偶数的和，输出结果", initialCode: "s = 0\nn = 2\n# 写代码\n", expected: "2550", answer: "while n <= 100:\n    s = s + n\n    n = n + 2\nprint(s)", hint: "累加变量先初始化为 0，计数从 2 开始每次加 2 保证都是偶数，循环结束后输出这个和。", requireCode: "while\\s+.*\\s*[<>=!]", requireMsg: "用 while 累加偶数（n 每次 +2）再 print(s)。" }
     ]
   },
   {
@@ -573,9 +573,9 @@ window.COURSES = [
     expected: "0\n0\n0\n0\n1\n2",
     hints: ["思路：外层循环里再写一个循环", "细节：内层循环整体放在外层循环体内（缩进）", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "用嵌套 for 累计 i 从1到2、j从1到3 的所有 i*j 之和并输出", initialCode: "s = 0\n# 写代码\n", expected: "18", answer: "for i in range(1,3):\n    for j in range(1,4):\n        s = s + i * j\nprint(s)", hint: "两个循环一层套一层，外层管 i、内层管 j；累加变量放最外面初始化为 0，每个组合把乘积加上去。", requireCode: "for.*for", requireMsg: "嵌套循环累加 i*j。" },
-      { tier: "巩固", task: "用嵌套 for 打印外层 1~2、内层 1~3 的所有组合 j，如 1 1 1 2 2 2，每行一组", initialCode: "# 写代码\n", expected: "111\n222", answer: "for i in range(1,3):\n    line = \"\"\n    for j in range(1,4):\n        line = line + str(i)\n    print(line)", hint: "外层每换一个数就要重新准备一个空文字，内层把同一个字符拼三次，回到外层再整行输出。", requireCode: "for.*for", requireMsg: "外层循环每行内层的数。" },
-      { tier: "挑战", task: "用嵌套 for 统计外层 1~2、内层 1~4 中，内层 j 能被外层 i 整除的次数并输出", initialCode: "c = 0\n# 写代码\n", expected: "6", answer: "for i in range(1,3):\n    for j in range(1,5):\n        if j % i == 0:\n            c = c + 1\nprint(c)", hint: "双层循环里用 % 判断内层数能否被外层数整除，成立就让计数器加 1；计数器在循环之前先准备好。", requireCode: "for.*for", requireMsg: "嵌套循环里 if j%i==0 计数。" }
+      { tier: "热身", task: "用嵌套 for 累计 i 从1到2、j从1到3 的所有 i*j 之和并输出", initialCode: "s = 0\n# 写代码\n", expected: "18", answer: "s = 0\nfor i in range(1, 3):\n    for j in range(1, 4):\n        s = s + i * j\nprint(s)", hint: "两个循环一层套一层，外层管 i、内层管 j；累加变量放最外面初始化为 0，每个组合把乘积加上去。", requireCode: "for[^\\n]*:[\\s\\S]*?\\n[ \\t]+for[ \\t]", requireMsg: "嵌套循环累加 i*j。" },
+      { tier: "巩固", task: "用嵌套 for 打印外层 1~2、内层 1~3 的所有组合 j，如 1 1 1 2 2 2，每行一组", initialCode: "# 写代码\n", expected: "111\n222", answer: "for i in range(1, 3):\n    line = \"\"\n    for j in range(1, 4):\n        line = line + str(i)\n    print(line)", hint: "外层每换一个数就要重新准备一个空文字，内层把同一个字符拼三次，回到外层再整行输出。", requireCode: "for[^\\n]*:[\\s\\S]*?\\n[ \\t]+for[ \\t]", requireMsg: "外层循环每行内层的数。" },
+      { tier: "挑战", task: "用嵌套 for 统计外层 1~2、内层 1~4 中，内层 j 能被外层 i 整除的次数并输出", initialCode: "c = 0\n# 写代码\n", expected: "6", answer: "c = 0\nfor i in range(1, 3):\n    for j in range(1, 5):\n        if j % i == 0:\n            c = c + 1\nprint(c)", hint: "双层循环里用 % 判断内层数能否被外层数整除，成立就让计数器加 1；计数器在循环之前先准备好。", requireCode: "for[^\\n]*:[\\s\\S]*?\\n[ \\t]+for[ \\t]", requireMsg: "嵌套循环里 if j%i==0 计数。" }
     ]
   },
   {
@@ -712,8 +712,8 @@ window.COURSES = [
     expected: "7",
     hints: ["思路：def 定义，return 返回，函数名(参数) 调用", "细节：函数体要缩进", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "定义 square(n) 返回 n 的平方，调用 square(5) 并输出", initialCode: "# 写代码\n", expected: "25", answer: "def square(n): return n*n; print(square(5))", hint: "分三块：用 def 声明函数并设好参数，函数体里用 return 交出结果，最后再调用一次。", requireCode: "def\\s+square", requireMsg: "请 def square(n) 返回 n*n，再调用。" },
-      { tier: "巩固", task: "定义 sub(a,b) 返回两数之差，调用 sub(10,4) 并输出", initialCode: "# 写代码\n", expected: "6", answer: "def sub(a,b): return a-b; print(sub(10,4))", hint: "两个参数写在括号里用逗号隔开，函数体做减法后靠 return 送回结果，别在函数里直接输出。", requireCode: "def\\s+sub", requireMsg: "请 def sub(a,b) 返回 a-b，再调用。" },
+      { tier: "热身", task: "定义 square(n) 返回 n 的平方，调用 square(5) 并输出", initialCode: "# 写代码\n", expected: "25", answer: "def square(n):\n    return n * n\n\nprint(square(5))", hint: "分三块：用 def 声明函数并设好参数，函数体里用 return 交出结果，最后再调用一次。", requireCode: "def\\s+square", requireMsg: "请 def square(n) 返回 n*n，再调用。" },
+      { tier: "巩固", task: "定义 sub(a,b) 返回两数之差，调用 sub(10,4) 并输出", initialCode: "# 写代码\n", expected: "6", answer: "def sub(a, b):\n    return a - b\n\nprint(sub(10, 4))", hint: "两个参数写在括号里用逗号隔开，函数体做减法后靠 return 送回结果，别在函数里直接输出。", requireCode: "def\\s+sub", requireMsg: "请 def sub(a,b) 返回 a-b，再调用。" },
       { tier: "挑战", task: "定义 mx(a,b) 返回两数中较大的那个（用 if/else 判断），调用 mx(3,9) 并输出", initialCode: "# 写代码\n", expected: "9", answer: "def mx(a,b):\n    if a > b:\n        return a\n    else:\n        return b\nprint(mx(3,9))", hint: "函数体里要分岔：用 if 和 else 比大小，谁大就 return 谁，两条分支都要有返回值。", requireCode: "def\\s+mx", requireMsg: "用 if/else 在函数里判断并 return 较大值。" }
     ]
   },
@@ -848,9 +848,9 @@ window.COURSES = [
     expected: "6",
     hints: ["思路：def 定义函数，for 累加，return 返回", "细节：先 s=0", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "定义 max_list(li) 返回列表最大值，调用 max_list([3,5,2]) 并输出", initialCode: "# 写代码\n", expected: "5", answer: "def max_list(li): return max(li); print(max_list([3,5,2]))", hint: "按题目给的名字和参数写 def，函数体借内置的 max() 求最大值，再用 return 把它送出去。", requireCode: "def\\s+max_list", requireMsg: "请 def max_list(li) 返回最大值。" },
-      { tier: "巩固", task: "定义 even_sum(li) 返回偶数之和，调用 even_sum([1,2,3,4]) 并输出", initialCode: "# 写代码\n", expected: "6", answer: "def even_sum(li): return sum(x for x in li if x%2==0); print(even_sum([1,2,3,4]))", hint: "函数里要逐个看元素：只把偶数挑出来相加，累加变量从 0 起，最后用 return 送回总和。", requireCode: "def\\s+even_sum", requireMsg: "请 def even_sum(li) 求偶数之和。" },
-      { tier: "挑战", task: "定义 count_even(li) 返回偶数个数，调用 count_even([1,2,3,4]) 并输出", initialCode: "# 写代码\n", expected: "2", answer: "def count_even(li): return sum(1 for x in li if x%2==0); print(count_even([1,2,3,4]))", hint: "数个数不用求和公式：遍历时每遇到一个偶数就把计数器加一，最后 return 这个计数。", requireCode: "def\\s+count_even", requireMsg: "请 def count_even(li) 数偶数个数。" }
+      { tier: "热身", task: "定义 max_list(li) 返回列表最大值，调用 max_list([3,5,2]) 并输出", initialCode: "# 写代码\n", expected: "5", answer: "def max_list(li):\n    return max(li)\n\nprint(max_list([3, 5, 2]))", hint: "按题目给的名字和参数写 def，函数体借内置的 max() 求最大值，再用 return 把它送出去。", requireCode: "def\\s+max_list", requireMsg: "请 def max_list(li) 返回最大值。" },
+      { tier: "巩固", task: "定义 even_sum(li) 返回偶数之和，调用 even_sum([1,2,3,4]) 并输出", initialCode: "# 写代码\n", expected: "6", answer: "def even_sum(li):\n    return sum(x for x in li if x % 2 == 0)\n\nprint(even_sum([1, 2, 3, 4]))", hint: "函数里要逐个看元素：只把偶数挑出来相加，累加变量从 0 起，最后用 return 送回总和。", requireCode: "def\\s+even_sum", requireMsg: "请 def even_sum(li) 求偶数之和。" },
+      { tier: "挑战", task: "定义 count_even(li) 返回偶数个数，调用 count_even([1,2,3,4]) 并输出", initialCode: "# 写代码\n", expected: "2", answer: "def count_even(li):\n    return sum(1 for x in li if x % 2 == 0)\n\nprint(count_even([1, 2, 3, 4]))", hint: "数个数不用求和公式：遍历时每遇到一个偶数就把计数器加一，最后 return 这个计数。", requireCode: "def\\s+count_even", requireMsg: "请 def count_even(li) 数偶数个数。" }
     ]
   },
   {
@@ -1124,9 +1124,9 @@ window.COURSES = [
     expected: "不能除以零",
     hints: ["思路：把可能出错的放 try，出错交给 except 处理", "细节：except 后跟着处理代码（缩进）", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "用 try/except 处理 int('abc')，出错时打印：转换失败", initialCode: "# 写代码\n", expected: "转换失败", answer: "try: print(int('abc')) except: print(\"转换失败\")", hint: "int 转不成数字会抛 ValueError，这句放进 try，处理写在 except 下面，两边都要缩进。", requireCode: "except", requireMsg: "用 try/except 接住错误。" },
-      { tier: "巩固", task: "用 try/except 处理 1+'a'，出错时打印：类型不对", initialCode: "# 写代码\n", expected: "类型不对", answer: "try: print(1+'a') except: print(\"类型不对\")", hint: "数字和字符串相加会报 TypeError，用 try 包住这句，except 里写失败时该打印的内容。", requireCode: "except", requireMsg: "用 try/except 接住错误。" },
-      { tier: "挑战", task: "用 try/except 处理 len(5)，出错时打印：不能数", initialCode: "# 写代码\n", expected: "不能数", answer: "try: print(len(5)) except: print(\"不能数\")", hint: "len 收不了数字，会抛 TypeError；用 try/except 接住，两个分支下面都要缩进。", requireCode: "except", requireMsg: "用 try/except 接住错误。" }
+      { tier: "热身", task: "用 try/except 处理 int('abc')，出错时打印：转换失败", initialCode: "# 写代码\n", expected: "转换失败", answer: "try:\n    print(int(\"abc\"))\nexcept:\n    print(\"转换失败\")", hint: "int 转不成数字会抛 ValueError，这句放进 try，处理写在 except 下面，两边都要缩进。", requireCode: "except", requireMsg: "用 try/except 接住错误。" },
+      { tier: "巩固", task: "用 try/except 处理 1+'a'，出错时打印：类型不对", initialCode: "# 写代码\n", expected: "类型不对", answer: "try:\n    print(1 + \"a\")\nexcept:\n    print(\"类型不对\")", hint: "数字和字符串相加会报 TypeError，用 try 包住这句，except 里写失败时该打印的内容。", requireCode: "except", requireMsg: "用 try/except 接住错误。" },
+      { tier: "挑战", task: "用 try/except 处理 len(5)，出错时打印：不能数", initialCode: "# 写代码\n", expected: "不能数", answer: "try:\n    print(len(5))\nexcept:\n    print(\"不能数\")", hint: "len 收不了数字，会抛 TypeError；用 try/except 接住，两个分支下面都要缩进。", requireCode: "except", requireMsg: "用 try/except 接住错误。" }
     ]
   },
   {
@@ -1203,9 +1203,9 @@ window.COURSES = [
     expected: "(1, 3)",
     hints: ["思路：return 用逗号隔开返回多个", "细节：min/max 取最小最大", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "定义 first_last(li) 返回第一个和最后一个，调用 first_last([9,5,7]) 并输出", initialCode: "# 写代码\n", expected: "(9, 7)", answer: "def first_last(li): return li[0], li[-1]; print(first_last([9,5,7]))", hint: "函数里一次 return 两个值，中间用逗号隔开；首尾元素分别用下标 0 和 -1。", requireCode: "def\\s+first_last", requireMsg: "定义 first_last 返回 (li[0], li[-1])。" },
-      { tier: "巩固", task: "定义 div_mod(a,b) 返回商和余数，调用 div_mod(17,5) 并输出", initialCode: "# 写代码\n", expected: "(3, 2)", answer: "def div_mod(a,b): return a//b, a%b; print(div_mod(17,5))", hint: "两个结果写在同一个 return 后，用逗号分开；商用整除，余数用百分号取余。", requireCode: "def\\s+div_mod", requireMsg: "定义 div_mod 返回 (a//b, a%b)。" },
-      { tier: "挑战", task: "定义 max_min(li) 返回最大值和最小值，调用 max_min([4,1,9]) 并输出", initialCode: "# 写代码\n", expected: "(9, 1)", answer: "def max_min(li): return max(li), min(li); print(max_min([4,1,9]))", hint: "借助内置的 max 和 min 拿到两端值，再用逗号把两个结果一起 return。", requireCode: "def\\s+max_min", requireMsg: "定义 max_min 返回 (max(li), min(li))。" }
+      { tier: "热身", task: "定义 first_last(li) 返回第一个和最后一个，调用 first_last([9,5,7]) 并输出", initialCode: "# 写代码\n", expected: "(9, 7)", answer: "def first_last(li):\n    return li[0], li[-1]\n\nprint(first_last([9, 5, 7]))", hint: "函数里一次 return 两个值，中间用逗号隔开；首尾元素分别用下标 0 和 -1。", requireCode: "def\\s+first_last", requireMsg: "定义 first_last 返回 (li[0], li[-1])。" },
+      { tier: "巩固", task: "定义 div_mod(a,b) 返回商和余数，调用 div_mod(17,5) 并输出", initialCode: "# 写代码\n", expected: "(3, 2)", answer: "def div_mod(a, b):\n    return a // b, a % b\n\nprint(div_mod(17, 5))", hint: "两个结果写在同一个 return 后，用逗号分开；商用整除，余数用百分号取余。", requireCode: "def\\s+div_mod", requireMsg: "定义 div_mod 返回 (a//b, a%b)。" },
+      { tier: "挑战", task: "定义 max_min(li) 返回最大值和最小值，调用 max_min([4,1,9]) 并输出", initialCode: "# 写代码\n", expected: "(9, 1)", answer: "def max_min(li):\n    return max(li), min(li)\n\nprint(max_min([4, 1, 9]))", hint: "借助内置的 max 和 min 拿到两端值，再用逗号把两个结果一起 return。", requireCode: "def\\s+max_min", requireMsg: "定义 max_min 返回 (max(li), min(li))。" }
     ]
   },
   {
@@ -1454,7 +1454,7 @@ window.COURSES = [
     exercises: [
       { tier: "热身", task: "调用 c_to_f，输出 c_to_f(100)", initialCode: "def c_to_f(c):\n    return c * 9 / 5 + 32\n# 写代码\n", expected: "212.0", answer: "print(c_to_f(100))", hint: "c_to_f 应该已经定义好了，把摄氏温度当参数传进去调用，得到的是小数。", requireCode: "c_to_f\\s*\\(", requireMsg: "调用 c_to_f(100)。" },
       { tier: "巩固", task: "定义 f_to_c(f) 返回 摄氏 = (f-32)*5/9，调用 f_to_c(212) 并输出", initialCode: "# 写代码\n", expected: "100.0", answer: "def f_to_c(f):\n    return (f - 32) * 5 / 9\nprint(f_to_c(212))", hint: "定义 f_to_c 时把公式写进 return，先减再乘除，括号别漏，否则顺序会错。", requireCode: "def\\s+f_to_c", requireMsg: "定义 f_to_c，返回 (f-32)*5/9。" },
-      { tier: "挑战", task: "定义 k_to_c(k) 返回 摄氏 = k - 273.15，调用 k_to_c(300) 并输出", initialCode: "# 写代码\n", expected: "26.85", answer: "def k_to_c(k):\n    return k - 273.15\nprint(k_to_c(300))", hint: "定义 k_to_c 时函数体只有一行 return，用开氏温度减去一个固定的小数差值。", requireCode: "def\\s+k_to_c", requireMsg: "定义 k_to_c，返回 k-273.15。" }
+      { tier: "挑战", task: "定义 k_to_c(k) 返回摄氏 = k - 273.15，调用 k_to_c(300) 并输出。（提示：浮点数会有一点点误差，用 round(结果, 2) 保留两位小数）", initialCode: "# 写代码\n", expected: "26.85", answer: "def k_to_c(k):\n    return round(k - 273.15, 2)\n\nprint(k_to_c(300))", hint: "定义 k_to_c 时函数体只有一行 return，用开氏温度减去一个固定的小数差值。", requireCode: "def\\s+k_to_c", requireMsg: "定义 k_to_c，返回 k-273.15。" }
     ]
   },
   {
@@ -1479,9 +1479,9 @@ window.COURSES = [
     expected: "(3, 1, 6)",
     hints: ["思路：return 用逗号返回多个", "细节：max/min/sum 内置函数", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "定义 avg(li) 返回平均值，调用 avg([2,4,6]) 并输出", initialCode: "# 写代码\n", expected: "4.0", answer: "def avg(li): return sum(li)/len(li); print(avg([2,4,6]))", hint: "定义 avg 接收列表，把总和除以个数，求和和计数分别用内置的 sum 与 len。", requireCode: "def\\s+avg", requireMsg: "定义 avg(li) 返回 sum/len。" },
-      { tier: "巩固", task: "定义 total(li) 返回列表和，调用 total([5,7,8]) 并输出", initialCode: "# 写代码\n", expected: "20", answer: "def total(li): return sum(li); print(total([5,7,8]))", hint: "定义 total 接收列表，函数体直接 return 内置求和函数的结果，一行就够。", requireCode: "def\\s+total", requireMsg: "定义 total(li) 返回 sum(li)。" },
-      { tier: "挑战", task: "定义 range_len(li) 返回元组(最大值-最小值, 个数)，调用 range_len([3,9,1]) 并输出", initialCode: "# 写代码\n", expected: "(8, 3)", answer: "def range_len(li): return max(li)-min(li), len(li); print(range_len([3,9,1]))", hint: "用 max 和 min 求出差值、用 len 数个数，两个结果用逗号一起 return 出去。", requireCode: "def\\s+range_len", requireMsg: "return (max-min, len)。" }
+      { tier: "热身", task: "定义 avg(li) 返回平均值，调用 avg([2,4,6]) 并输出", initialCode: "# 写代码\n", expected: "4.0", answer: "def avg(li):\n    return sum(li) / len(li)\n\nprint(avg([2, 4, 6]))", hint: "定义 avg 接收列表，把总和除以个数，求和和计数分别用内置的 sum 与 len。", requireCode: "def\\s+avg", requireMsg: "定义 avg(li) 返回 sum/len。" },
+      { tier: "巩固", task: "定义 total(li) 返回列表和，调用 total([5,7,8]) 并输出", initialCode: "# 写代码\n", expected: "20", answer: "def total(li):\n    return sum(li)\n\nprint(total([5, 7, 8]))", hint: "定义 total 接收列表，函数体直接 return 内置求和函数的结果，一行就够。", requireCode: "def\\s+total", requireMsg: "定义 total(li) 返回 sum(li)。" },
+      { tier: "挑战", task: "定义 range_len(li) 返回元组(最大值-最小值, 个数)，调用 range_len([3,9,1]) 并输出", initialCode: "# 写代码\n", expected: "(8, 3)", answer: "def range_len(li):\n    return max(li) - min(li), len(li)\n\nprint(range_len([3, 9, 1]))", hint: "用 max 和 min 求出差值、用 len 数个数，两个结果用逗号一起 return 出去。", requireCode: "def\\s+range_len", requireMsg: "return (max-min, len)。" }
     ]
   },
   {
@@ -1704,9 +1704,9 @@ window.COURSES = [
     expected: "输入非法",
     hints: ["思路：except 后面写错误类型", "细节：int(\"abc\") 抛 ValueError", "答案：见示例"],
     exercises: [
-      { tier: "热身", task: "用 try/except 捕获 ZeroDivisionError：5/0 出错打印\"不能除零\"", initialCode: "# 写代码\n", expected: "不能除零", answer: "try: print(5/0) except ZeroDivisionError: print(\"不能除零\")", hint: "把会出错的除法放进 try，except 后面要写准异常类型 ZeroDivisionError，出错才跳去打印提示。", requireCode: "ZeroDivisionError", requireMsg: "except ZeroDivisionError。" },
-      { tier: "巩固", task: "用 try/except 捕获 TypeError：\"a\"+1 出错打印\"类型不对\"", initialCode: "# 写代码\n", expected: "类型不对", answer: "try: print(\"a\"+1) except TypeError: print(\"类型不对\")", hint: "字符串和数字相加会抛 TypeError，except 要写这个类型名才接得住，接住后再输出那句提示。", requireCode: "TypeError", requireMsg: "except TypeError。" },
-      { tier: "挑战", task: "用 try/except 捕获 IndexError：取出 [1,2][5] 出错打印\"越界\"", initialCode: "# 写代码\n", expected: "越界", answer: "try: print([1,2][5]) except IndexError: print(\"越界\")", hint: "下标超出范围抛的是 IndexError，except 后面写准这个类型，才能接住越界错误并输出提示。", requireCode: "IndexError", requireMsg: "except IndexError。" }
+      { tier: "热身", task: "用 try/except 捕获 ZeroDivisionError：5/0 出错打印\"不能除零\"", initialCode: "# 写代码\n", expected: "不能除零", answer: "try:\n    print(5 / 0)\nexcept ZeroDivisionError:\n    print(\"不能除零\")", hint: "把会出错的除法放进 try，except 后面要写准异常类型 ZeroDivisionError，出错才跳去打印提示。", requireCode: "ZeroDivisionError", requireMsg: "except ZeroDivisionError。" },
+      { tier: "巩固", task: "用 try/except 捕获 TypeError：\"a\"+1 出错打印\"类型不对\"", initialCode: "# 写代码\n", expected: "类型不对", answer: "try:\n    print(\"a\" + 1)\nexcept TypeError:\n    print(\"类型不对\")", hint: "字符串和数字相加会抛 TypeError，except 要写这个类型名才接得住，接住后再输出那句提示。", requireCode: "TypeError", requireMsg: "except TypeError。" },
+      { tier: "挑战", task: "用 try/except 捕获 IndexError：取出 [1,2][5] 出错打印\"越界\"", initialCode: "# 写代码\n", expected: "越界", answer: "try:\n    print([1, 2][5])\nexcept IndexError:\n    print(\"越界\")", hint: "下标超出范围抛的是 IndexError，except 后面写准这个类型，才能接住越界错误并输出提示。", requireCode: "IndexError", requireMsg: "except IndexError。" }
     ]
   },
   {
